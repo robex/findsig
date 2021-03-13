@@ -117,7 +117,7 @@ int main(int argc, char **argv)
 
 	FILE *f = fopen(argv[1], "rb");
 	if (!f) {
-		printf("fatal: file not found\n");
+		printf("fatal: file could not be opened\n");
 		return 1;
 	}
 
