@@ -144,11 +144,11 @@ int main(int argc, char **argv)
 	putchar('\n');
 #endif
 
-	uint32_t addr = find_sig(file_buf, file_sz, pat_buf, pat_len, mask);		
+	long addr = find_sig(file_buf, file_sz, pat_buf, pat_len, mask);
 	if (addr == -1) {
 		printf("pattern not found\n");
 	} else {
-		printf("found at addr: 0x%x\n", addr);
+		printf("found at addr: 0x%lx\n", addr);
 		printf("matched bytes: ");
 		for (int i = addr; i < addr + pat_len; i++) {
 			printf("\\x%02x", file_buf[i]);
